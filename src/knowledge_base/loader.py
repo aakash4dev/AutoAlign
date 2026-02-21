@@ -42,7 +42,7 @@ class PolicyDocumentLoader:
         self.vector_store_path = vector_store_path
         self.collection_name = collection_name
         self.embeddings = GoogleGenerativeAIEmbeddings(
-            model="models/text-embedding-004",
+            model="models/gemini-embedding-001",
             google_api_key=GOOGLE_API_KEY,
         )
 
