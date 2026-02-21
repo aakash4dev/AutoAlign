@@ -116,7 +116,7 @@ AutoAlign/
 ### 1. Clone and Install
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/aakash4dev/AutoAlign.git
 cd AutoAlign
 pip install -r requirements.txt
 ```
