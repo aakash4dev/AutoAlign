@@ -113,15 +113,14 @@ AutoAlign/
 
 ## Getting Started
 
-### 1. Clone and Install
+### 1. Clone the Repo
 
 ```bash
 git clone https://github.com/aakash4dev/AutoAlign.git
 cd AutoAlign
-pip install -r requirements.txt
 ```
 
-### 2. Configure
+### 2. Configure Environment
 
 ```bash
 cp .env.example .env
@@ -130,9 +129,44 @@ cp .env.example .env
 
 Get a Google AI Studio API key: https://aistudio.google.com/app/apikey
 
-### 3. Run the Demo
+### 3. Backend Setup
 
 ```bash
+# Create a virtual environment
+python3 -m venv .venv
+
+# Activate it
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start the backend API server (runs on http://localhost:8000)
+uvicorn api.server:app --reload --port 8000
+```
+
+Keep this terminal open. The backend must be running for the frontend to work.
+
+### 4. Frontend Setup
+
+Open a **new terminal** and run:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend will start on **http://localhost:3000**.
+
+### 5. Using the CLI (Optional)
+
+You can also use AutoAlign directly from the command line without the frontend:
+
+```bash
+# Activate the virtual environment (if not already)
+source .venv/bin/activate
+
 # Align the sample BRD (which has intentional violations)
 python main.py align examples/sample_brd.md
 

@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from typing import List, Optional
 
-from langchain.text_splitter import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
+from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_community.vectorstores import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -42,7 +42,7 @@ class PolicyDocumentLoader:
         self.vector_store_path = vector_store_path
         self.collection_name = collection_name
         self.embeddings = GoogleGenerativeAIEmbeddings(
-            model="models/embedding-001",
+            model="models/text-embedding-004",
             google_api_key=GOOGLE_API_KEY,
         )
 
