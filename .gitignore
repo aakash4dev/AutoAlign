@@ -44,3 +44,7 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Data
+emails.csv
+datasets/*
